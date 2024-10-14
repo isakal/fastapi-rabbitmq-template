@@ -11,10 +11,6 @@ services:
                 condition: service_healthy
         ports:
             - 5000:5000
-        environment:
-            # printing doesn't work without this
-            # TODO: move this to Dockerfile
-            PYTHONUNBUFFERED: true
         restart: always
 
     # service b
@@ -28,8 +24,6 @@ services:
                 condition: service_healthy
         ports:
             - 5001:5001
-        environment:
-            PYTHONUNBUFFERED: true
         restart: always
 
     # event bus

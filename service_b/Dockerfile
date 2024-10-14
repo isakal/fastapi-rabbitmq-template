@@ -10,4 +10,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app/
 
+ENV PYTHONUNBUFFERED=true
+
 CMD [ "fastapi", "dev", "--port", "5001", "--host", "0.0.0.0" ]

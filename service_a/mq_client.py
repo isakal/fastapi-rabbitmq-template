@@ -40,7 +40,7 @@ class MQClient:
             )
 
             txt = msg_text["random_id"]
-            print(f"RECV: {txt}", flush=True)
+            print(f"RECV: {txt}")
 
             # simulate random failures
             if random.choice([True, False]):
@@ -55,7 +55,7 @@ class MQClient:
             no_ack=False             # deliver auto ack on
         )
         
-        print(f"started consuming queue {queue_name}", flush=True)
+        print(f"started consuming queue {queue_name}")
 
 
     async def send_message(self, message: dict):

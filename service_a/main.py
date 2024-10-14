@@ -26,7 +26,7 @@ async def home():
     await mq_cl.send_message({
         "random_id": txt
     })
-    print(f"SENT: {txt}", flush=True)
+    print(f"SENT: {txt}")
 
     return {
         "hello": "world"
